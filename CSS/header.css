@@ -1,87 +1,121 @@
-/* Fichier: header.css */
+/*   Généralités sur le corps et le header  */
 
-/* --- Généralités sur le corps et le header --- */
 
+
+
+
+/* Réinitialisation des marges et définition de la police par défaut */
 body {
-    /* Assurez-vous que la navigation commence en haut de la page */
     margin: 0;
-    font-family: Arial, sans-serif; /* Police de base */
+    font-family: Arial, sans-serif;
 }
 
+/* Style du header */
 header {
-    background-color: #171853; /* Couleur de fond sombre pour la barre de navigation */
+    background-color: #171853; 
     padding: 0;
-    box-shadow: 0 2px 4px rgb(3, 0, 0); /* Légère ombre pour la profondeur */
+    box-shadow: 0 2px 4px rgb(3, 0, 0); 
 }
 
-/* --- Style de la navigation (nav) et de la liste principale (ul) --- */
 
+
+
+
+
+
+/* Style de la navigation (nav) et de la liste principale (ul) */
+
+
+
+
+
+
+/* Suppression des puces, marges et paddings par défaut */
 nav ul {
-    list-style: none; /* Supprime les puces */
+    list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center; /* Centre les éléments de la liste principale */
+    text-align: center;
 }
 
+/* Disposition en ligne des éléments de la liste principale */
 nav > ul {
-    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
-    justify-content: center; /* Centre les éléments horizontalement */
+    display: flex;
+    justify-content: center;
 }
 
+/* Style des éléments de la liste principale (li) */
 nav ul li {
-    display: block; /* Les éléments doivent être des blocs pour le centrage et la largeur */
-    position: relative; /* Nécessaire pour positionner le sous-menu (dropdown) */
+    display: block;
+    position: relative;
 }
 
-/* --- Style des liens (a) --- */
 
+
+
+/*  Style des liens (a)  */
+
+
+
+
+
+/* Style des liens principaux */
 nav ul li a {
-    display: block; /* Prend toute la largeur/hauteur de l'élément li */
-    padding: 15px 20px; /* Espacement intérieur des liens */
-    text-decoration: none; /* Supprime le soulignement */
-    color: rgb(252, 252, 252); /* Couleur du texte des liens */
-    transition: background-color 0.3s; /* Transition pour un effet de survol plus doux */
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    transition: background-color 0.3s;
 }
 
+/* Style des liens au survol */
 nav ul li a:hover {
-    background-color: #6c6ad6; /* Couleur de fond au survol des liens principaux */
+    background-color: #6c6ad6; 
 }
 
-/* --- Style du sous-menu (Menu Déroulant - Dropdown) --- */
 
+
+
+/* Style du sous-menu (Menu Déroulant)*/
+
+
+
+
+/* Cacher le sous-menu par défaut */
 nav ul ul {
-    /* S'applique à tous les sous-menus */
-    display: none; /* Cache le sous-menu par défaut */
-    position: absolute; /* Positionne le sous-menu par rapport à son parent <li> */
-    top: 100%; /* Place le sous-menu juste en dessous de l'élément parent */
-    left: 0;
-    background-color: #f4f6f7; /* Couleur de fond différente pour le sous-menu */
-    min-width: 220px; /* Largeur minimale pour les liens de projet */
-    z-index: 1000; /* Assure que le menu est au-dessus du reste du contenu */
-    text-align: left; /* Aligne le texte du sous-menu à gauche */
+    display: none;
+    position: absolute; 
+    top: 100%; 
+    background-color: #f4f6f7; 
+    min-width: 220px; 
+    z-index: 1000; 
+    text-align: left;
 }
 
+/* Affichage du sous-menu au survol */
 nav ul li:hover > ul {
-    /* Montre le sous-menu lorsque l'élément parent <li> est survolé */
     display: block;
 }
 
+/* Style des éléments du sous-menu */
 nav ul ul li {
-    /* Style des éléments du sous-menu */
-    width: 100%; /* Assure que chaque élément prend toute la largeur du sous-menu */
-    border-top: 1px solid #000000; /* Séparateur entre les éléments du sous-menu */
+    width: 100%; 
+    border-top: 1px solid #000000; 
 }
 
+/* Suppression de la bordure supérieure du premier élément du sous-menu */
 nav ul ul li:first-child {
-    border-top: none; /* Supprime le séparateur sur le premier élément */
+    border-top: none; 
 }
 
+/* Style des liens du sous-menu */
 nav ul ul li a {
-    padding: 10px 15px; /* Ajuste l'espacement pour les liens du sous-menu */
-    color: #111335; /* Couleur du texte légèrement plus claire */
+    padding: 10px 15px; 
+    color: #111335; 
 }
 
+/* Style des liens du sous-menu au survol */
 nav ul ul li a:hover {
-    background-color: #007bff; /* Couleur de survol distinctive pour les liens de projet */
+    background-color: #007bff; 
     color: white;
 }

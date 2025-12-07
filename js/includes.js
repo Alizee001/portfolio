@@ -1,17 +1,17 @@
-function loadContent(url, targetId) {
+function chargementcontenu(url, idDemandé) {
     fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erreur de chargement du fichier: ' + response.statusText);
+        .then(reponse => {
+            if (!reponse.ok) {
+                throw new Error('Erreur de chargement du fichier: ' + reponse.statusText);
             }
-            return response.text();
+            return reponse.text();
         })
         .then(data => {
-            document.getElementById(targetId).innerHTML = data;
+            document.getElementById(idDemandé).innerHTML = data;
         })
         .catch(error => console.error('Erreur lors de l\'inclusion :', error));
 }
 
 
-loadContent('../Partie_fixe/header.html', 'header-placeholder');
-loadContent('../Partie_fixe/footer.html', 'footer-placeholder');
+chargementcontenu('../Partie_fixe/header.html', 'header-demandé');
+chargementcontenu('../Partie_fixe/footer.html', 'footer-demandé');
