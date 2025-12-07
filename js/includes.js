@@ -12,6 +12,6 @@ function loadContent(url, targetId) {
         .catch(error => console.error('Erreur lors de l\'inclusion :', error));
 }
 
-// Appel des fonctions pour vos parties fixes
+
 loadContent('../Partie_fixe/header.html', 'header-placeholder');
 loadContent('../Partie_fixe/footer.html', 'footer-placeholder');
