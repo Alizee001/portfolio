@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id            Int      @id @default(autoincrement())
+  title         String   // Titre accrocheur [cite: 246]
+  context       String   // Contexte et problématique [cite: 248]
+  objectives    String   // Objectifs poursuivis [cite: 249]
+  missions      String   // Missions principales [cite: 250]
+  steps         String   // Étapes clés de réalisation [cite: 251]
+  skills        String   // Compétences mobilisées [cite: 252]
+  tools         String   // Outils utilisés [cite: 253]
+  academicLinks String   // Apports académiques [cite: 254]
+  reflection    String   // Conclusion réflexive 
+  imageUrl      String   // Illustration de qualité [cite: 247]
+  projectLink   String   // Lien vers le projet finalisé 
+}

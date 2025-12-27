@@ -1,8 +1,0 @@
-@import url('https://www.freefonts.io/consolas-font/');
-
-/*   Généralités sur le corps et le header  */
-
-/* Réinitialisation des marges et définition de la police par défaut */
-body {
-    font-family: Consolas, monospace;
-}
